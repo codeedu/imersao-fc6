@@ -1,0 +1,24 @@
+GET http://localhost:3000/tweets
+
+###
+POST http://localhost:3000/tweets
+Content-Type: application/json
+
+{
+    "Text": "Imersão começou.....",
+    "User": {
+        "Name": "Luiz Carlos"
+    }
+}
+
+###
+GET http://localhost:3000/mail-list
+
+
+###
+POST http://localhost:3000/mail-list
+Content-Type: application/json
+
+{
+    "emails": ["user1@test.com", "user2@test.com", "user3@test.com"]
+}
