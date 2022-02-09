@@ -1,14 +1,12 @@
-[<img src="../img/nestjs.svg" width="72"/>](Nest.js)
+![Next.js](../img/nextjs.png)
 
-# Imersão Full Stack & FullCycle 6.0 - Fincycle - Back-end do monitoramento de tweets
+# Imersão Full Stack & FullCycle 5.0 - Front-end do monitoramento de tweets
 
 ## Descrição
 
-Repositório do back-end do monitoramento de tweets feito com Nest.js
+Repositório do front-end do monitoramento de tweets feito com Next.js
 
-**Importante**: A aplicação do Apache Kafka primeiro.
-
-## Rodar a aplicação
+**Importante**: A aplicação do Apache Kafka e Nest.js deve estar rodando primeiro.
 
 ### Configurar /etc/hosts
 
@@ -21,14 +19,15 @@ Acrescente no seu /etc/hosts (para Windows o caminho é C:\Windows\system32\driv
 ```
 Em todos os sistemas operacionais é necessário abrir o programa para editar o *hosts* como Administrator da máquina ou root.
 
-
-Execute o comando:
+Execute os comando:
 
 ```
 docker-compose up
 ```
 
-Acessar http://localhost:3000. Use o arquivo `api.http` para testar a API.
+Acessar http://localhost:3001. 
+
+### Para Windows 
 
 Quer configurar um ambiente de desenvolvimento produtivo? Veja o vídeo: [https://www.youtube.com/watch?v=bniD6dehPCQ](https://www.youtube.com/watch?v=bniD6dehPCQ) 
 
