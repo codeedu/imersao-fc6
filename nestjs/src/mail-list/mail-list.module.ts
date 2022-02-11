@@ -19,6 +19,7 @@ import { ClientKafka, ClientsModule, Transport } from '@nestjs/microservices';
           options: {
             client: {
               clientId: process.env.KAFKA_CLIENT_ID,
+              connectionTimeout: parseInt(process.env.KAFKA_CONNECTION_TIMEOUT), 
               brokers: [process.env.KAFKA_HOST],
               ssl: process.env.KAFKA_USE_SSL === 'true',
               ...(process.env.KAFKA_SASL_USERNAME &&
@@ -34,7 +35,7 @@ import { ClientKafka, ClientsModule, Transport } from '@nestjs/microservices';
             },
           },
           consumer: {
-            groupId: process.env.KAFKA_CONSUMER_GROUP_ID
+            groupId: process.env.KAFKA_CONSUMER_GROUP_ID,
           },
         }),
       },

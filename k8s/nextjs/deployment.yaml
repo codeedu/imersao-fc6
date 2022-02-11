@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nextjs
+spec:
+  selector:
+    matchLabels:
+      app: nextjs
+  template:
+    metadata:
+      labels:
+        app: nextjs
+    spec:
+      containers:
+        - name: nextjs
+          image: argentinaluiz/imersao6-next.js
+          envFrom:
+            - secretRef:
+                name: nextjs-secret
+          ports:
+            - containerPort: 3000

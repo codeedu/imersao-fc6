@@ -1,0 +1,19 @@
+version: '3'
+services:
+  app:
+    build: .
+    environment:
+      - MAIL_HOST=smtp.sendgrid.net
+      - MAIL_PORT=465
+      - MAIL_USER=apikey
+      - MAIL_PASSWORD=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
+      - MAIL_FROM=argentinaluiz@gmail.com
+      - BOOTSTRAP_SERVERS=pkc-ymrq7.us-east-2.aws.confluent.cloud:9092
+      - SECURITY_PROTOCOL=SASL_SSL
+      - SASL_MECHANISMS=PLAIN
+      - SASL_USERNAME=XMNIRNUJXI3E7GCC
+      - SASL_PASSWORD=CdaTkW32rtDoutQCcCrXHdlonmHjdGc71My3iwoYUxOLHqsnO2Rn5XKaS+FdmEuZ
+    volumes:
+      - .:/go/src/
+    extra_hosts:
+      - "host.docker.internal:172.17.0.1"

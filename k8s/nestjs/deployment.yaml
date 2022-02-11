@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nestjs
+spec:
+  selector:
+    matchLabels:
+      app: nestjs
+  template:
+    metadata:
+      labels:
+        app: nestjs
+    spec:
+      containers:
+        - name: nestjs
+          image: argentinaluiz/imersao6-nestjs
+          envFrom:
+            - secretRef:
+                name: nestjs-secret
+          ports:
+            - containerPort: 3000
